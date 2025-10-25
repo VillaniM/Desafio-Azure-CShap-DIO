@@ -45,7 +45,7 @@ public class FuncionarioController : ControllerBase
     {
         _context.Funcionarios.Add(funcionario);
         _context.SaveChanges();
-        
+
 
         var tableClient = GetTableClient();
         var funcionarioLog = new FuncionarioLog(funcionario, TipoAcao.Inclusao, funcionario.Departamento, Guid.NewGuid().ToString());
